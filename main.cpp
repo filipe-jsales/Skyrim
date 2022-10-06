@@ -51,10 +51,10 @@ int main()
    for( int i = 0; i < classes.size(); i++ )
       delete classes[ i ];
 
-   skyrimPtr = 0; 
-   skyrimPtr_extra = 0;
    delete skyrimPtr;
+   skyrimPtr = 0; 
    delete skyrimPtr_extra;
+   skyrimPtr_extra = 0;
 
    // Skyrim skyrim;
    // skyrim.cadastrarBounties(5);

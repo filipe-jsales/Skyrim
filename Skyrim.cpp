@@ -74,7 +74,8 @@ Skyrim::~Skyrim( )
     delete [] logGuildPtr; 
 
     for( auto i = 0; i < players.size( ); i++ )
-        delete this->players[ i ];  
+        delete this->players[ i ];
+        this->players.pop_back( );  
 }
 
 

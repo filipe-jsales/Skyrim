@@ -78,7 +78,7 @@ private:
     int logSize;
 
     //Quantidade de registros em logGuildPtr
-    //Quantidades de players cadastrados ao longo do ano
+    //Quantidades de players cadastrados ao longo do tempo
     int nextEntrieInLog;
 
     void printHist( ) const;
