@@ -46,11 +46,12 @@ int main()
    Skyrim *skyrimPtr_extra = new Skyrim( *skyrimPtr ); //copia
    cout << "\n\nImprimindo informacoes de skyrimPtr_extra.\n";
    skyrimPtr_extra->displayMessage( );
-
+   skyrimPtr_extra->cadastrarTasks( 10 );
    //Desalocando memória
    for( int i = 0; i < classes.size(); i++ )
       delete classes[ i ];
 
+   //desalocando memória
    delete skyrimPtr;
    skyrimPtr = 0; 
    delete skyrimPtr_extra;

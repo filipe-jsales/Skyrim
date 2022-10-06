@@ -198,6 +198,24 @@ void Skyrim::printListaPlayers( ) const
     aumentarMemoria( numPlayers );    
  }
 
+ void Skyrim::cadastrarTasks( int tasks )
+ {
+    if ( nextEntrieInLog < logSize )
+    {
+        logTasks[ nextEntrieInLog++ ] = tasks;
+        return;
+    }
+
+    if( logSize == 0 )
+    {
+        logSize = 1;
+        logTasks = new int[ logSize ];
+        logTasks[ nextEntrieInLog++ ] = tasks;
+        return;
+    }       
+    cout << "Tasks Full";
+ }
+
  void Skyrim::printHist( ) const
  {
     for( int i = 0; i < nextEntrieInLog; i++ )

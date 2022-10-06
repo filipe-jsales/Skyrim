@@ -43,6 +43,7 @@ public:
     void cadastrarBounties( int );
     void showBounties();
     void completeBounty( int );
+    void cadastrarTasks( int );
 private:
 
     string guildName;
@@ -65,6 +66,7 @@ private:
 
     //O número de players pode crescer dinamicamente
     vector< string * > players;
+    vector< string * > tasks;
 
     //map de bounties   
     map<int, int> bounties;   
@@ -73,12 +75,13 @@ private:
     //Guarda o histórico da quantidade de players
     //que participaram da guild ao longo do tempo
     int *logGuildPtr;
+    int *logTasks;
 
-    //Tamanho alocado para logGuildPtr
+    //Tamanho alocado para logs
     int logSize;
 
     //Quantidade de registros em logGuildPtr
-    //Quantidades de players cadastrados ao longo do tempo
+    //Quantidades de logs cadastrados ao longo do tempo
     int nextEntrieInLog;
 
     void printHist( ) const;
